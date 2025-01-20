@@ -1,6 +1,5 @@
 package com.java;
 
-import java.lang.reflect.Array;
 import java.util.List;
 
 /**
@@ -12,12 +11,12 @@ import java.util.List;
  */
 public class Structured {
 	public static void main(String[] args) {
-		printAllNumbersInListStructured(List.of(12,45,3,5,2));
+		printAllNumbersInListStructured(List.of(12, 45, 3, 5, 2));
 	}
 	
 	private static void printAllNumbersInListStructured(List<Integer> numbers) {
 		// How to loop the numbers
-		for (int number : numbers){
+		for (int number : numbers) {
 			System.out.println(number);
 		}
 	}
