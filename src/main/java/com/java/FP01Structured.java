@@ -9,7 +9,7 @@ import java.util.List;
  * @version 1.0
  * @since 2025-01-20
  */
-public class Structured {
+public class FP01Structured {
 	public static void main(String[] args) {
 		printAllNumbersInListStructured(List.of(12, 45, 3, 5, 2));
 	}
