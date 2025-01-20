@@ -11,7 +11,11 @@ import java.util.List;
  */
 public class FP01Functional {
 	public static void main(String[] args) {
-		printAllNumbersInListFunctional(List.of(12, 45, 3, 5, 2));
+		printAllEvenNumbersInListFunctional(List.of(12, 45, 3, 5, 2));
+	}
+	
+	private static boolean isEven(int number) {
+		return number % 2 == 0;
 	}
 	
 	private static void printAllNumbersInListFunctional(List<Integer> numbers) {
@@ -26,12 +30,11 @@ public class FP01Functional {
 		// What to do
 		// Using method reference (Class_name::method_name)
 		numbers.stream().forEach(System.out::println);
-		
-		// How to loop the numbers
-		//		for (int number : numbers) {
-		//			System.out.println(number);
-		//		}
-		
-		
+	}
+	
+	private static void printAllEvenNumbersInListFunctional(List<Integer> numbers) {
+		numbers.stream()
+				.filter(FP01Functional::isEven)
+				.forEach(System.out::println);
 	}
 }
