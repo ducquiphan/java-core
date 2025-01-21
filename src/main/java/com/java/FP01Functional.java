@@ -10,8 +10,21 @@ import java.util.List;
  * @since 2025-01-20
  */
 public class FP01Functional {
+	
+	private static final List<String> courses = List.of("AWS", "Spring", "Spring Boot", "Java", "Python", "API", "Microservices", "Docker",
+			"Kubernetes");
+	
 	public static void main(String[] args) {
 		printAllEvenNumbersInListFunctional(List.of(12, 45, 3, 5, 2));
+		System.out.println();
+		printAllOddNumbersInListFunctional(List.of(12, 45, 3, 5, 2));
+		System.out.println();
+		printAllCourseIndividually();
+		System.out.println();
+		printAllCourseContainingSpring();
+		System.out.println();
+		printAllCourseHasAtLeastFourLetters();
+		System.out.println();
 	}
 	
 	//	private static boolean isEven(int number) {
@@ -36,6 +49,28 @@ public class FP01Functional {
 		numbers.stream()
 				//.filter(FP01Functional::isEven)
 				.filter(number -> number % 2 == 0) // Lambda
+				.forEach(System.out::println);
+	}
+	
+	private static void printAllOddNumbersInListFunctional(List<Integer> numbers) {
+		numbers.stream()
+				.filter(number -> number % 2 == 1) // Lambda
+				.forEach(System.out::println);
+	}
+	
+	private static void printAllCourseIndividually() {
+		courses.stream().forEach(System.out::println);
+	}
+	
+	private static void printAllCourseContainingSpring() {
+		courses.stream()
+				.filter(course -> course.contains("Spring"))
+				.forEach(System.out::println);
+	}
+	
+	private static void printAllCourseHasAtLeastFourLetters() {
+		courses.stream()
+				.filter(course -> course.length() >= 4)
 				.forEach(System.out::println);
 	}
 }
