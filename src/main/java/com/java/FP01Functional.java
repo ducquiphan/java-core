@@ -14,9 +14,9 @@ public class FP01Functional {
 		printAllEvenNumbersInListFunctional(List.of(12, 45, 3, 5, 2));
 	}
 	
-	private static boolean isEven(int number) {
-		return number % 2 == 0;
-	}
+	//	private static boolean isEven(int number) {
+	//		return number % 2 == 0;
+	//	}
 	
 	private static void printAllNumbersInListFunctional(List<Integer> numbers) {
 		// Convert Array into a stream of numbers
@@ -34,7 +34,8 @@ public class FP01Functional {
 	
 	private static void printAllEvenNumbersInListFunctional(List<Integer> numbers) {
 		numbers.stream()
-				.filter(FP01Functional::isEven)
+				//.filter(FP01Functional::isEven)
+				.filter(number -> number % 2 == 0) // Lambda
 				.forEach(System.out::println);
 	}
 }
