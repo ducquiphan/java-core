@@ -9,6 +9,7 @@ package com.java;
  */
 public class PrimitiveDataType {
 	public static void main(String[] args) {
+		
 		byte a = 116;
 		short b = 12310;
 		int c = 123123123;
