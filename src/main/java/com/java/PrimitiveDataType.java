@@ -37,5 +37,40 @@ public class PrimitiveDataType {
 		//		float myOtherFloatValue = 5.25f;
 		float myOtherFloatValue = (float) 5.25;
 		System.out.println("Result of myOtherFloatValue: " + myOtherFloatValue);
+		
+		realNumberChallenge();
+		
+		charLesson();
+		
+		booleanLesson();
+	}
+	
+	private static void realNumberChallenge() {
+		System.out.println("-----------------------");
+		System.out.println("Real Number Challenge: ");
+		double pound = 120d;
+		double kilo = pound * 0.45359237d;
+		System.out.println(pound + "pounds to kilo: " + kilo + "kg");
+		System.out.println();
+	}
+	
+	private static void charLesson() {
+		System.out.println("----------------------");
+		System.out.println("Char Lesson: ");
+		char myChar = 'a';
+		System.out.println("myChar: " + myChar);
+		char myUnicode = '\u0044'; // hexadecimal
+		System.out.println("myUnicode: " + myUnicode);
+		char myDecimalCode = 68; //decimal
+		System.out.println("myDecimalCode: " + myDecimalCode);
+		System.out.println();
+	}
+	
+	private static void booleanLesson() {
+		System.out.println("----------------------");
+		System.out.println("Boolean Lesson: ");
+		boolean isNewLesson = true;
+		System.out.println("Is new lesson: " + isNewLesson);
+		System.out.println();
 	}
 }
