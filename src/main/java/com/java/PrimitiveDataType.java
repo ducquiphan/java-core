@@ -37,5 +37,15 @@ public class PrimitiveDataType {
 		//		float myOtherFloatValue = 5.25f;
 		float myOtherFloatValue = (float) 5.25;
 		System.out.println("Result of myOtherFloatValue: " + myOtherFloatValue);
+		
+		realNumberChallenge();
+	}
+	
+	private static void realNumberChallenge() {
+		System.out.println("-----------------------");
+		System.out.println("Real Number Challenge: ");
+		double pound = 120d;
+		double kilo = pound * 0.45359237d;
+		System.out.println(pound + "pounds to kilo: " + kilo + "kg");
 	}
 }
