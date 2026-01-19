@@ -33,5 +33,9 @@ public class PrimitiveDataType {
 		double myDoubleValue = 5d;
 		System.out.println("Result of myFloatValue: " + myFloatValue);
 		System.out.println("Result of myDoubleValue: " + myDoubleValue);
+		
+		//		float myOtherFloatValue = 5.25f;
+		float myOtherFloatValue = (float) 5.25;
+		System.out.println("Result of myOtherFloatValue: " + myOtherFloatValue);
 	}
 }
