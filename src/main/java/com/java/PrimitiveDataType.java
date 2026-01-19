@@ -43,6 +43,8 @@ public class PrimitiveDataType {
 		charLesson();
 		
 		booleanLesson();
+		
+		stringLesson();
 	}
 	
 	private static void realNumberChallenge() {
@@ -71,6 +73,18 @@ public class PrimitiveDataType {
 		System.out.println("Boolean Lesson: ");
 		boolean isNewLesson = true;
 		System.out.println("Is new lesson: " + isNewLesson);
+		System.out.println();
+	}
+	
+	private static void stringLesson() {
+		System.out.println("---------------------");
+		System.out.println("String Lesson: ");
+		String myString = "Hello";
+		System.out.println("myString: " + myString);
+		String lastString = "10";
+		int myInt = 50;
+		lastString = lastString + myInt; // String concatenation
+		System.out.println("lastString: " + lastString);
 		System.out.println();
 	}
 }
