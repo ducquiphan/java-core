@@ -8,7 +8,10 @@ package com.java;
  * @since 2025-01-20
  */
 public class Main {
+	private static int a;
+	
 	public static void main(String[] args) {
-		System.out.println("Hello world!");
+		// when there is no declaration, a static int's value will be 0
+		System.out.println(a);
 	}
 }
