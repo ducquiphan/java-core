@@ -11,6 +11,12 @@ public class StatementAndConditionalLogic {
 	public static void main(String[] args) {
 		lessonTernaryOperator();
 		lessonPrecedenceOperator();
+		lessonIfElse(10000, 10, 200, true);
+		displayHighScorePosition("Duc", calculateHighScorePosition(1500));
+		displayHighScorePosition("Duc", calculateHighScorePosition(1000));
+		displayHighScorePosition("Duc", calculateHighScorePosition(500));
+		displayHighScorePosition("Duc", calculateHighScorePosition(100));
+		displayHighScorePosition("Duc", calculateHighScorePosition(25));
 	}
 	
 	static void lessonTernaryOperator() {
@@ -44,17 +50,37 @@ public class StatementAndConditionalLogic {
 		System.out.println();
 	}
 	
-	static void lessonIfElse() {
+	static void lessonIfElse(int score, int levelCompleted, int bonus, boolean gameOver) {
 		System.out.println("---------------------");
 		System.out.println("lessonIfElse: ");
-		int score = 10000;
-		int levelCompleted = 8;
-		int bonus = 200;
-		boolean gameOver = true;
-		int finalScore = score;
+		int finalScore;
 		if (gameOver) {
-			finalScore += (levelCompleted * bonus);
+			finalScore = calculateScore(score, levelCompleted, bonus);
 			System.out.println("Final score: " + finalScore);
+		}
+		System.out.println();
+	}
+	
+	static int calculateScore(int score, int levelCompleted, int bonus) {
+		return score + levelCompleted * bonus;
+	}
+	
+	static void displayHighScorePosition(String playerName, int playerPosition) {
+		System.out.println("---------------------");
+		System.out.println("displayHighScorePosition: ");
+		System.out.println(playerName + " managed to get position " + playerPosition + " on the high score list");
+		System.out.println();
+	}
+	
+	static int calculateHighScorePosition(int playerScore) {
+		if (playerScore >= 1000) {
+			return 1;
+		} else if (playerScore >= 500) {
+			return 2;
+		} else if (playerScore >= 100) {
+			return 3;
+		} else {
+			return 4;
 		}
 	}
 }
