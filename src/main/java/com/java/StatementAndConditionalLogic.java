@@ -43,4 +43,18 @@ public class StatementAndConditionalLogic {
 		}
 		System.out.println();
 	}
+	
+	static void lessonIfElse() {
+		System.out.println("---------------------");
+		System.out.println("lessonIfElse: ");
+		int score = 10000;
+		int levelCompleted = 8;
+		int bonus = 200;
+		boolean gameOver = true;
+		int finalScore = score;
+		if (gameOver) {
+			finalScore += (levelCompleted * bonus);
+			System.out.println("Final score: " + finalScore);
+		}
+	}
 }
