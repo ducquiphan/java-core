@@ -83,4 +83,70 @@ public class StatementAndConditionalLogic {
 			return 4;
 		}
 	}
+	
+	public static boolean areEqualByThreeDecimalPlaces(double a, double b) {
+		long aLong = (long) (a * 1000);
+		long bLong = (long) (b * 1000);
+		return aLong == bLong;
+	}
+	
+	public static void checkNumber(int number) {
+		System.out.println(number > 0 ? "positive" : number < 0 ? "negative" : "zero");
+	}
+	
+	public static long toMilesPerHour(double kilometersPerHour) {
+		if (kilometersPerHour < 0) {
+			return -1;
+		} else {
+			return (long) Math.round(kilometersPerHour * (1.0 / 1.609));
+		}
+	}
+	
+	public static void printConversion(double kilometersPerHour) {
+		long miles = toMilesPerHour(kilometersPerHour);
+		if (miles < 0) {
+			System.out.println("Invalid Value");
+		} else {
+			System.out.println(kilometersPerHour + " km/h = " + miles + " mi/h");
+		}
+	}
+	
+	public static void printMegaBytesAndKiloBytes(int kiloBytes) {
+		if (kiloBytes < 0) {
+			System.out.println("Invalid Value");
+			return;
+		}
+		System.out.println(kiloBytes + " KB = " + kiloBytes / 1024 + " MB and " + kiloBytes % 1024 + " KB");
+	}
+	
+	public static boolean shouldWakeUp(boolean barking, int hourOfDay) {
+		if ((hourOfDay >= 0 && hourOfDay < 8 && barking) || (hourOfDay > 22 && hourOfDay <= 23 && barking)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public static boolean isLeapYear(int year) {
+		if (year < 1 || year > 9999) {
+			return false;
+		} else if ((year % 4 == 0) && (year % 100 != 0)) {
+			return true;
+		} else if ((year % 100 == 0) && (year % 400 == 0)) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static boolean hasEqualSum(int a, int b, int c) {
+		return a + b == c;
+	}
+	
+	public static boolean hasTeen(int a, int b, int c) {
+		return isTeen(a) || isTeen(b) || isTeen(c);
+	}
+	
+	public static boolean isTeen(int num) {
+		return num >= 13 && num <= 19;
+	}
 }
